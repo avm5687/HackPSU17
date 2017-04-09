@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <!-- A-Frame: A WebVR framework that abstracts away the tedious WebGL and WebAssembly work -->
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    
+    <!-- some scripts for networking -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+    <script src="easyrtc/easyrtc.js"></script>
+    <script src="https://unpkg.com/networked-aframe/dist/networked-aframe.min.js"></script>
+
+    <!-- some scripts to make things look pretty -->
+    <script src="https://unpkg.com/aframe-randomizer-components@^3.0.1/dist/aframe-randomizer-components.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.5/dist/aframe-particle-system-component.min.js"></script>
+
+    <script>
+    
+      // Detect trigger pulled (spacebar)
+      document.onkeyup = function(e){
+        if(e.keyCode == 67){
+          window.location.href = "https://capricious-dessert.glitch.me/concert.html";
+        }
+        if(e.keyCode == 82){
+          window.location.href = "https://capricious-dessert.glitch.me/relaxing.html";
+        }
+        if(e.keyCode == 83){
+          window.location.href = "https://capricious-dessert.glitch.me/subway.html";
+        }
+        if(e.keyCode == 66){
+          window.location.href = "https://capricious-dessert.glitch.me/blackhole.html";
+        }
+        if(e.keyCode == 77){
+          window.location.href = "https://capricious-dessert.glitch.me/coaster.html";
+        }
+        if(e.keyCode == 72){
+          window.location.href = "https://capricious-dessert.glitch.me/horror.html";
+        }
+        if(e.keyCode == 75){
+          window.location.href = "https://capricious-dessert.glitch.me/shark.html";
+        }
+        if(e.keyCode == 65){
+          window.location.href = "https://capricious-dessert.glitch.me/blueangels.html";
+        }
+      }
+      
+    </script>
+    
+  </head>
+  
+  <body>
+
+    <a-scene>
+      
+      <a-assets>
+        <img id="grid" src="https://img.gs/bbdkhfbzkk/stretch/http://i.imgur.com/zdHHhcQ.png" crossorigin="anonymous">
+      </a-assets>
+        <!-- Templates -->
+      <!--<a-entity light="color: #ccccff; intensity: 1; type: ambient;" visible=""></a-entity>-->
+      
+      <a-entity id="river" geometry="primitive: plane" material="color:blue"
+                position="0 0 0" sound="src: url(https://cdn.glitch.com/929e144f-7e51-4474-931d-3df363f62db8%2FWhole%20Brain%20Teaching%20%20Grade%201%20Classroom.mp3?1491725042320); autoplay: true"></a-entity>
+      
+      <!--
+        https://c1.staticflickr.com/1/232/475520241_ca7da5263d_o.jpg
+        https://upload.wikimedia.org/wikipedia/commons/f/fa/Trafalgar_Square_360_Panorama_Cropped_Sky%2C_London_-_Jun_2009.jpg
+      -->
+      <a-sky src="https://c1.staticflickr.com/1/232/475520241_ca7da5263d_o.jpg"></a-sky>
+      
+    </a-scene>
+
+  </body>
+</html>
